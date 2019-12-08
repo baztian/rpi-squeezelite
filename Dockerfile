@@ -10,9 +10,9 @@ RUN apt-get update && apt-get install -y \
     libasound2-dev \
     libasound2 \
     libasound2-data \
-    apt-get clean
+    && apt-get clean
 
-RUN curl -L https://sourceforge.net/projects/lmsclients/files/squeezelite/linux/squeezelite-1.9.6.1198-armv6hf.tar.gz | tar xzf squeezelite
+RUN curl -L https://sourceforge.net/projects/lmsclients/files/squeezelite/linux/squeezelite-1.9.6.1198-armv6hf.tar.gz | tar xz squeezelite
 
 RUN chmod a+x squeezelite
 
