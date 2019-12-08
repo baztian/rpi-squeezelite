@@ -9,5 +9,11 @@ Example: docker run --privileged --name=squeezelite --restart=always -d -e SERVE
 
 ## Development
 
+To allow for development on non arm machines execute the following once.
+
+    docker run --rm --privileged multiarch/qemu-user-static:register --reset
+
+Tagging works as follows.
+
     git tag $(grep -oP 'SQUEEZELITE_VERSION=\K.+' Dockerfile)-$(git rev-parse --short HEAD)
     git push && git push --tags
